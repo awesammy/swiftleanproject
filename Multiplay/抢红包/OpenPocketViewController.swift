@@ -137,6 +137,9 @@ class OpenPocketViewController: UIViewController {
                 if (currentV["uid"] as! String) != userID {
                     //User didnt get the money
                     let sysStatus = randomMoneyAndDBSetup(varpockType: pocketType)
+                    if sysStatus {
+                        gotoDetailPage()
+                    }
                     
                 }
                 else{
@@ -147,6 +150,9 @@ class OpenPocketViewController: UIViewController {
         }
         else{
             let sysStatus = randomMoneyAndDBSetup(varpockType: pocketType)
+            if sysStatus {
+                gotoDetailPage()
+            }
         }
         //Create log
     }

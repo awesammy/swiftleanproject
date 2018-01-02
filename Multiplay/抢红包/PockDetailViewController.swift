@@ -126,7 +126,7 @@ class PockDetailViewController: UIViewController,UITableViewDelegate,UITableView
             let cell = tableView.dequeueReusableCell(withIdentifier: "PocketMainCell", for: indexPath) as! PocketMainCell
             cell.cellMyName.text = userName
             cell.cellMyAmount.text = pocketMyAmount
-            cell.cellPocketInfo.text = "红包还未抽完"
+            cell.cellPocketInfo.text = pocketType + " " + "红包还未抽完"
             
             return cell
         }

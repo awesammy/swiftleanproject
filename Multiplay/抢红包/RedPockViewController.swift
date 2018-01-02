@@ -72,7 +72,7 @@ class RedPockViewController: UIViewController,UITableViewDelegate,UITableViewDat
     @IBOutlet var navigationBar: UINavigationBar!
     
     @IBAction func reloadingTableView(_ sender: UIBarButtonItem) {
-        tableView.reloadData()
+        self.dismiss(animated: true, completion: nil)
     }
     @IBAction func addNewAction(_ sender: UIBarButtonItem) {
         addPocket()
@@ -266,9 +266,7 @@ class RedPockViewController: UIViewController,UITableViewDelegate,UITableViewDat
         }
         let cancelAction = UIAlertAction(title: "取消", style: .cancel)
         alert.addAction(modifyAction)
-        if userName == "" {
-            alert.addAction(nameAction)
-        }
+        alert.addAction(nameAction)
         
         alert.addAction(cancelAction)
         self.present(alert, animated: true, completion: nil)
